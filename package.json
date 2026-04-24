@@ -1,0 +1,15 @@
+{
+  "name": "healthcare-project-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Render-friendly root package for the HealthCare project",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mongoose": "^9.5.0"
+  }
+}
