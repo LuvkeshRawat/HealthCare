@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Dashboard</title>
+
+<link rel="stylesheet" href="patient.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+<aside class="sidebar">
+
+<div class="brand">
+<i class="fa-solid fa-heart-pulse"></i>
+<span>HealthCare+</span>
+</div>
+
+<ul>
+<li onclick="showSection('dashboardSection')" class="active">
+<i class="fa-solid fa-house"></i> Dashboard</li>
+
+<li onclick="showSection('appointmentsSection')">
+<i class="fa-solid fa-calendar-check"></i> Appointments</li>
+
+<li onclick="showSection('reportsSection')">
+<i class="fa-solid fa-file-medical"></i> Reports</li>
+
+<li onclick="showSection('doctorsSection')">
+<i class="fa-solid fa-user-doctor"></i> Doctors</li>
+
+<li onclick="showSection('notificationsSection')">
+<i class="fa-solid fa-bell"></i> Notifications</li>
+
+<li><a href="/"><i class="fa-solid fa-arrow-left"></i> Home</a></li>
+</ul>
+
+</aside>
+
+<main class="main">
+
+<header class="topbar">
+
+<div>
+<h1>Welcome Back, Patient</h1>
+<p>Track your healthcare journey easily.</p>
+</div>
+
+<div class="right-top">
+
+<div class="profile">
+<img src="https://i.pravatar.cc/45?img=12">
+<span id="patientProfileName">Patient</span>
+</div>
+
+<button id="themeBtn">&#9790;</button>
+
+</div>
+
+</header>
+
+<div id="dashboardSection" class="section active">
+
+<section class="stats">
+
+<div class="card">
+<i class="fa-solid fa-calendar-check"></i>
+<h2 id="totalAppointmentsCount">0</h2>
+<p>Total Appointments</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-file-medical"></i>
+<h2 id="totalReportsCount">0</h2>
+<p>Medical Reports</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-heart-pulse"></i>
+<h2>Good</h2>
+<p>Health Status</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-bell"></i>
+<h2 id="totalAlertsCount">0</h2>
+<p>Alerts</p>
+</div>
+
+</section>
+
+<section class="grid">
+
+<div class="panel big">
+<h2>Book Appointment</h2>
+
+<form class="book-form">
+<input type="text" id="patientNameInput" placeholder="Your Name">
+
+<select id="doctorSelect">
+<option value="">Select Doctor</option>
+</select>
+
+<input type="date" id="appointmentDate">
+
+<select id="departmentSelect">
+<option value="">Select Department</option>
+</select>
+
+<button type="submit">Book Now</button>
+</form>
+
+<p id="bookingStatus" class="booking-status"></p>
+</div>
+
+<div class="panel">
+<h2>Notifications</h2>
+<div id="dashboardNotifications">
+<div class="note">Loading notifications...</div>
+</div>
+</div>
+
+<div class="panel">
+<h2>Upcoming Visits</h2>
+<div id="upcomingVisits">
+<div class="visit">
+<strong>No upcoming visits</strong>
+<span>Book an appointment to get started</span>
+</div>
+</div>
+</div>
+
+<div class="panel">
+<h2>Health Tips</h2>
+
+<div class="tip">Drink enough water daily</div>
+<div class="tip">Walk 30 minutes every day</div>
+<div class="tip">Eat balanced meals</div>
+
+</div>
+
+</section>
+
+</div>
+
+<div id="appointmentsSection" class="section">
+<h2>Your Appointments</h2>
+<div id="appointmentList"></div>
+</div>
+
+<div id="reportsSection" class="section">
+<h2>Medical Reports</h2>
+<div id="prescriptionList">
+<p>No prescription notes available yet.</p>
+</div>
+</div>
+
+<div id="doctorsSection" class="section">
+<h2>Available Doctors</h2>
+<div id="doctorList"></div>
+</div>
+
+<div id="notificationsSection" class="section">
+<h2>All Notifications</h2>
+<div id="allNotifications">
+<div class="note">Loading notifications...</div>
+</div>
+</div>
+
+</main>
+</div>
+
+<script src="patient.js"></script>
+
+</body>
+</html>

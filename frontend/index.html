@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HealthCare+</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+<div class="logo">
+<i class="fa-solid fa-heart-pulse"></i> HealthCare+
+</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#doctors">Doctors</a>
+<a href="#contact">Contact</a>
+
+<button id="themeBtn">
+<i class="fa-solid fa-moon"></i>
+</button>
+</div>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="left">
+
+<span class="tag">Trusted Smart Healthcare Platform</span>
+
+<h1>Manage Your Entire Hospital Digitally</h1>
+
+<p>
+Appointments, patient records, doctor scheduling, admin control and modern healthcare management in one powerful platform.
+</p>
+
+<div class="buttons">
+<button class="btn1" onclick="location.href='/login'">Get Started</button>
+<button class="btn2" id="learnBtn">Learn More</button>
+</div>
+
+</div>
+
+<div class="right">
+<img src="https://img.freepik.com/free-vector/medical-team-concept-illustration_114360-1685.jpg">
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="about" id="services">
+<h2>Why Modern Hospitals Choose Us</h2>
+<p>
+We simplify hospital operations using smart dashboards, real-time records, secure storage and smooth coordination between patients, doctors and administrators.
+</p>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+
+<div class="box">
+<h2>50+</h2>
+<p>Expert Doctors</p>
+</div>
+
+<div class="box">
+<h2>1500+</h2>
+<p>Patients Served</p>
+</div>
+
+<div class="box">
+<h2>24/7</h2>
+<p>Emergency Support</p>
+</div>
+
+<div class="box">
+<h2>99%</h2>
+<p>Secure Data</p>
+</div>
+
+</section>
+
+<!-- DOCTORS -->
+<section class="cards-title" id="doctors">
+<h2>Smart Access Dashboards</h2>
+<p>Dedicated portals for every role.</p>
+</section>
+
+<section class="cards">
+
+<div class="card">
+<i class="fa-solid fa-user"></i>
+<h2>Patient Portal</h2>
+<p>Book appointments, reports, health history and doctor communication.</p>
+<a href="/login">Open</a>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-user-doctor"></i>
+<h2>Doctor Portal</h2>
+<p>Manage schedule, patients, treatment plans and appointments.</p>
+<a href="/login">Open</a>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-gear"></i>
+<h2>Admin Portal</h2>
+<p>Monitor system, users, analytics and complete operations.</p>
+<a href="/login">Open</a>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="about" id="contact">
+<h2>Contact Us</h2>
+<p>Email: support@healthcare.com | Phone: +91 XXXXX XXXXX</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 HealthCare+ | Better Care Through Technology</p>
+</footer>
+
+<!-- CHATBOT -->
+<div class="chat-btn" id="chatBtn">💬</div>
+
+<div class="chat-box" id="chatBox">
+
+<div class="chat-header">
+Health Assistant
+<span id="closeChat">✖</span>
+</div>
+
+<div class="chat-messages" id="chatMessages">
+<div class="bot-msg">Hello! How can I help you?</div>
+</div>
+
+<div class="chat-input-area">
+<input type="text" id="chatInput" placeholder="Type message...">
+<button id="sendBtn">Send</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - HealthCare+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="/login/login.css">
+</head>
+<body>
+
+<div class="page-shell">
+    <a class="back-home" href="/">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Home
+    </a>
+
+    <main class="login-layout">
+        <section class="welcome-panel">
+            <div class="brand">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>HealthCare+</span>
+            </div>
+
+            <p class="eyebrow">Secure access for patients, doctors and admins</p>
+            <h1>Welcome back to your smart healthcare workspace.</h1>
+            <p class="intro">
+                Track appointments, coordinate treatment, and manage hospital operations
+                from one secure portal designed for every role.
+            </p>
+
+            <div class="highlights">
+                <article class="highlight-card">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    <div>
+                        <h2>Protected Access</h2>
+                        <p>Fast login flow with role-based access to the right dashboard.</p>
+                    </div>
+                </article>
+
+                <article class="highlight-card">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <div>
+                        <h2>Always Organized</h2>
+                        <p>Appointments, records, and schedules stay connected in one place.</p>
+                    </div>
+                </article>
+
+                <article class="highlight-card">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <div>
+                        <h2>Built For Teams</h2>
+                        <p>Patients, doctors, and administrators each get a focused experience.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="credentials-box">
+                <p class="credentials-title">Demo credentials</p>
+                <div class="credential-grid">
+                    <span>Patient / 123</span>
+                    <span>Admin / 123</span>
+                </div>
+                <div id="doctorCredentialsList" class="credential-grid">
+                    <span>Doctor logins loading...</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-panel">
+            <div class="form-card">
+                <div class="form-heading">
+                    <p class="mini-label">Portal Login</p>
+                    <h2>Sign in to continue</h2>
+                    <p>Choose your role and enter your credentials to open your dashboard.</p>
+                </div>
+
+                <form id="loginForm" novalidate>
+                    <div class="role-selector" aria-label="Select your role">
+                        <button type="button" class="role-chip active" data-role="patient">
+                            <i class="fa-solid fa-user"></i>
+                            Patient
+                        </button>
+                        <button type="button" class="role-chip" data-role="doctor">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            Doctor
+                        </button>
+                        <button type="button" class="role-chip" data-role="admin">
+                            <i class="fa-solid fa-gear"></i>
+                            Admin
+                        </button>
+                    </div>
+
+                    <input type="hidden" id="role" value="patient">
+
+                    <label class="field">
+                        <span>Username</span>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="username" placeholder="Enter your username" required>
+                        </div>
+                    </label>
+
+                    <label class="field">
+                        <span>Password</span>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="password" placeholder="Enter your password" required>
+                            <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </label>
+
+                    <div class="form-meta">
+                        <label class="remember-me">
+                            <input type="checkbox" checked>
+                            <span>Keep me signed in</span>
+                        </label>
+                        <a href="/">Need help?</a>
+                    </div>
+
+                    <p id="statusMessage" class="status-message" aria-live="polite"></p>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span>Login to Dashboard</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="/login/login.js"></script>
+</body>
+</html>

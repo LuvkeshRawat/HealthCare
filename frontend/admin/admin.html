@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+<aside class="sidebar">
+
+<div class="brand">
+<i class="fa-solid fa-heart-pulse"></i>
+<span>HealthCare+</span>
+</div>
+
+<ul>
+<li class="nav-item active" data-section="dashboardSection"><i class="fa-solid fa-house"></i> Dashboard</li>
+<li class="nav-item" data-section="usersSection"><i class="fa-solid fa-users"></i> Users</li>
+<li class="nav-item" data-section="doctorsSection"><i class="fa-solid fa-user-doctor"></i> Doctors</li>
+<li class="nav-item" data-section="appointmentsSection"><i class="fa-solid fa-calendar-check"></i> Appointments</li>
+<li class="nav-item" data-section="reportsSection"><i class="fa-solid fa-chart-line"></i> Reports</li>
+<li><a href="/"><i class="fa-solid fa-arrow-left"></i> Home</a></li>
+</ul>
+
+</aside>
+
+<main class="main">
+
+<header class="topbar">
+
+<div>
+<h1>Welcome Back, Admin</h1>
+<p>Monitor and manage the healthcare platform efficiently.</p>
+</div>
+
+<div class="right-top">
+
+<div class="profile">
+<img src="https://i.pravatar.cc/45?img=20">
+<span>Admin</span>
+</div>
+
+<button id="themeBtn">&#9790;</button>
+
+</div>
+
+</header>
+
+<div id="dashboardSection" class="section active">
+<section class="stats">
+
+<div class="card">
+<i class="fa-solid fa-users"></i>
+<h2 id="totalPatients">0</h2>
+<p>Total Patients</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-user-doctor"></i>
+<h2 id="totalDoctors">0</h2>
+<p>Total Doctors</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-calendar-check"></i>
+<h2 id="totalAppointments">0</h2>
+<p>Total Appointments</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-file-medical"></i>
+<h2 id="totalPrescriptions">0</h2>
+<p>Prescriptions Saved</p>
+</div>
+
+</section>
+
+<section class="grid">
+
+<div class="panel big">
+<h2>User Management</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Role</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody id="userTable">
+<tr>
+<td colspan="3" style="text-align:center; color:gray;">Loading...</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="panel">
+<h2>Recent Activity</h2>
+<div id="activityList" class="stack-list">
+<div class="activity">Loading activity...</div>
+</div>
+</div>
+
+<div class="panel">
+<h2>Quick Actions</h2>
+
+<form id="doctorForm" class="action-form">
+<input type="text" id="doctorName" placeholder="Doctor name">
+<input type="text" id="doctorSpecialty" placeholder="Specialty">
+<select id="doctorStatus">
+<option value="Available">Available</option>
+<option value="Busy">Busy</option>
+<option value="On Leave">On Leave</option>
+</select>
+<button type="submit" class="actionBtn">Add Doctor</button>
+</form>
+
+<form id="noticeForm" class="action-form">
+<textarea id="noticeMessage" placeholder="Write an admin notice..."></textarea>
+<select id="noticeRole">
+<option value="all">Send to Everyone</option>
+<option value="doctor">Doctors Only</option>
+<option value="patient">Patients Only</option>
+</select>
+<button type="submit" class="actionBtn">Send Notice</button>
+</form>
+
+<button id="generateReportBtn" class="actionBtn secondary">Generate Report</button>
+<p id="actionStatus" class="action-status"></p>
+</div>
+
+</section>
+</div>
+
+<div id="usersSection" class="section">
+<div class="panel">
+<h2>All Platform Users</h2>
+<div id="usersList" class="stack-list">
+<div class="activity">No users available</div>
+</div>
+</div>
+</div>
+
+<div id="doctorsSection" class="section">
+<div class="panel">
+<h2>Doctor Directory</h2>
+<div id="doctorDirectory" class="stack-list">
+<div class="activity">No doctors available</div>
+</div>
+</div>
+</div>
+
+<div id="appointmentsSection" class="section">
+<div class="panel">
+<h2>All Appointments</h2>
+<table>
+<thead>
+<tr>
+<th>Patient</th>
+<th>Doctor</th>
+<th>Date</th>
+<th>Department</th>
+</tr>
+</thead>
+<tbody id="appointmentsTable">
+<tr>
+<td colspan="4" style="text-align:center; color:gray;">Loading...</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="reportsSection" class="section">
+<section class="grid">
+<div class="panel">
+<h2>Department Report</h2>
+<div id="departmentReport" class="stack-list">
+<div class="activity">No report data yet</div>
+</div>
+</div>
+
+<div class="panel">
+<h2>Doctor Workload</h2>
+<div id="doctorReport" class="stack-list">
+<div class="activity">No doctor workload data yet</div>
+</div>
+</div>
+
+<div class="panel">
+<h2>Report Summary</h2>
+<div id="reportSummary" class="stack-list">
+<div class="activity">Generate a report to view summary.</div>
+</div>
+</div>
+</section>
+</div>
+
+</main>
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
